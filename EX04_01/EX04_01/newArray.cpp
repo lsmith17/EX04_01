@@ -11,8 +11,7 @@ int main(){
 	prompt_count(&arraysize);
 	int* numbers = alloc_array(arraysize);
 	populate_numbers(numbers, arraysize);
-	cout << "Integers entered: " << count_avgnums(numbers, arraysize) << endl;
-	cout << " Integers above the average: " << endl;
+	cout << " Integers above the average: " << count_avgnums(numbers, arraysize) << endl;
 
 	delete[]numbers;
 }
@@ -31,7 +30,7 @@ int * alloc_array(int size)
 }
 
 void populate_numbers(int* numbers, int size){
-	for (int* curr = numbers; curr = numbers + size; curr++){
+	for (int* curr = numbers; curr < numbers + size; curr++){
 		cout << "Enter number: " << endl;
 		cin >> *curr;
 	}
