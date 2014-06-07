@@ -39,7 +39,7 @@ int count_avgnums(int* numbers, int size){
 	int average = *numbers / size;
 	int avg_numbers = 0;
 	for (int* curr = numbers; curr < numbers + size; curr++){
-		if (avg_numbers > average )
+		if (*curr > average )
 		avg_numbers++;
 }
 	return avg_numbers;
